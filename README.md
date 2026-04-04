@@ -28,3 +28,4 @@ Use $conventional-commits to write a Conventional Commit message for the changes
 
 - Main skill instructions live in `conventional-commits/SKILL.md`.
 - UI metadata for skill lists/chips lives in `conventional-commits/agents/openai.yaml`.
+- Commit messages should be returned as plain text with actual line breaks. Literal `\n` or `/n` should not be used in place of newlines.

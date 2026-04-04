@@ -34,6 +34,7 @@ Apply these REQUIRED rules:
 10. Mark breaking changes with `!` before `:` and/or `BREAKING CHANGE: <description>` footer.
 11. Keep `BREAKING CHANGE` uppercase when used.
 12. Treat other structural units as case-insensitive when validating.
+13. Return real line breaks in the final message. Never emit literal escape text such as `\n` or `/n` in place of newlines.
 
 Apply these RECOMMENDED quality rules:
 
@@ -74,6 +75,7 @@ Use types outside `feat` and `fix` when appropriate; only `feat`, `fix`, and bre
 7. Add body paragraphs only when extra context is needed; wrap around 72 columns.
 8. Add trailer footers for metadata (for example `Fixes: #123`, `Reviewed-by: Name`).
 9. Re-check against the checklist below before finalizing.
+10. Before returning, confirm the message is plain text with actual blank lines, not escaped newline sequences.
 
 ## Validation Checklist
 
@@ -87,6 +89,7 @@ Confirm all items before returning a commit message:
 6. `feat`/`fix` are used correctly when applicable.
 7. Description uses imperative wording and is concise.
 8. Body/footers are wrapped for readability when multi-line.
+9. The final output uses actual newlines and contains no literal `\n` or `/n` tokens unless they are intentionally part of the commit content.
 
 ## SemVer Mapping
 
